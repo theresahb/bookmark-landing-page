@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.bg-dot {
+    background: url('../images/bg-dots.svg') no-repeat;
+}
+
+.accordion-title {
+    cursor: pointer;
+}
+
+.accordion-title + .accordion-content {
+    display: none;
+}
+  
+.accordion-title.open + .accordion-content {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: all ease-in-out .3s;
+    filter: invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg) brightness(95%) contrast(118%);
+}
+
+.tab-title h1.active::after{
+    content: '';
+    display: block;
+    border: 2px solid hsl(0, 94%, 66%);
+    width: 50%;
+    margin: 20px auto -20px;
+}
+
+#tab-content-2,
+#tab-content-3 {
+    display: none;
+}
+
+.tab-content {
+    display: flex;
+    animation: opacity .4s;
+}
+
+.card:nth-child(2){
+    margin-top: 30px;
+}
+.card:nth-child(3){
+    margin-top: 60px;
+}
+
+.active {
+    display: flex;
+    
+}
+
+#menu.active {
+    left: 0;
+}
+
+#menu {
+    left: 100%;
+    transition: all .4s;
+}
+
+.tab-shown {
+    color: hsl(0, 94%, 66%);
+}
+
+.login:hover,
+.contact:hover {
+    border: 2px solid hsl(0, 94%, 66%);
+}
+
+.chrome:hover,
+.add:hover {
+    border: 2px solid hsl(231, 69%, 60%);
+}
+
+.firefox:hover {
+    border: 2px solid hsl(229, 31%, 21%);
+}
+
+@media screen and (max-width: 360px) {
+    .btns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        column-gap: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .extension {
+        padding: 0 3rem;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 25%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 1;
+    }
+}
