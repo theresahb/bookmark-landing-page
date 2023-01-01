@@ -11,4 +11,4 @@ JavaScript
 
 ## Links
 
-- [Live link](https://theresahb.github.io/spense-landing-page/)
+- [Live link](https://theresahb.github.io/bookmark-landing-page/)
